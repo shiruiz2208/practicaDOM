@@ -20,3 +20,29 @@ tituloPrincipal.innerHTML = 'Titulo desde <b> app.js </b>'
 
 //agregamos clase a h1 
 tituloPrincipal.className = 'display-1 text-info'
+
+
+// me creo una funcion 
+const verMas = () => {
+    console.log('desde la funcion ver mas')
+}
+//crear un parrafo opcion 1 
+const parrafoNuevo = document.createElement('p'); 
+console.log(parrafoNuevo)// <p> esta vacio</p>
+
+
+// agregar el texto y clases 2
+parrafoNuevo.innerHTML = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, alias suscipit deserunt magnam ex inventore! Rem dolorum adipisci laboriosam? Veritatis quod laborum, repudiandae explicabo soluta possimus amet beatae? Amet, quaerat.` ;
+
+parrafoNuevo.className = 'lead'
+
+//agregar el nuevo parrafo al DOM 3 A TRAVES DE UNA vARIABLE
+const seccionInformacionExtra = document.getElementsByClassName('my-5');
+console.log(seccionInformacionExtra[1]);
+seccionInformacionExtra[1].appendChild(parrafoNuevo)
+
+//buscar el boton ver mas 
+const btnVerMas = document.getElementById('btnVerMas');
+
+//agregar un evento click 
+btnVerMas.addEventListener('click',verMas() )
