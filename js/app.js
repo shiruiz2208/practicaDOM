@@ -50,7 +50,14 @@ console.log(seccionInformacionExtra[1].children)
 
 //modificar el texto del boton 
 btnVerMas.innerHTML ='Ocultar';
-btnVerMas.className = 'btn btn-outline-danger';
+btnVerMas.className = 'btn btn-outline-danger'; {}else{
+    console.log('aqui deberia ocultar el parrafo');
+    console.log(seccionInformacionExtra[1].children);
+    seccionInformacionExtra[1].removeChild(seccionInformacionExtra[1].children[2]);
+    btnVerMas.innerHTML ='Ver ,mas';
+    btnVerMas.className = 'btn btn-outline-ligth';
+
+}
 
 //buscar el boton ver mas 
 const btnVerMas = document.getElementById('btnVerMas');
