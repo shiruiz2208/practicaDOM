@@ -39,10 +39,23 @@ parrafoNuevo.className = 'lead'
 //agregar el nuevo parrafo al DOM 3 A TRAVES DE UNA vARIABLE
 const seccionInformacionExtra = document.getElementsByClassName('my-5');
 console.log(seccionInformacionExtra[1]);
-seccionInformacionExtra[1].appendChild(parrafoNuevo)
+//seccionInformacionExtra[1].appendChild(parrafoNuevo)
+//seccionInfotmacionExtra[1].appendChild(parrafoNuevo) // agregamos parrafo nuevo
+// seccionInformacion [1].prepend(parrafoNuevo)//agregamos parrafo al principio
+seccionInformacionExtra[1].insertBefore(parrafoNuevo,btnVerMas)
+console.log(seccionInformacionExtra[1].children)
+    
+ // agrega un nodo al hijo al principio
+//console.log(seccionInformacionExtra[1].children) 
+
+//modificar el texto del boton 
+btnVerMas.innerHTML ='Ocultar';
+btnVerMas.className = 'btn btn-outline-danger';
 
 //buscar el boton ver mas 
 const btnVerMas = document.getElementById('btnVerMas');
 
 //agregar un evento click 
 btnVerMas.addEventListener('click',verMas() )
+
+
